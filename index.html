@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>PlayBack Fútbol — Tu mejor jugada, siempre lista</title>
+  <meta name="description" content="PlayBack Fútbol convierte tu iPhone en una cámara de repeticiones para fútbol: guarda la jugada sola cuando alguien grita «gol» o la gente festeja, o con un gesto, y la revisás en VAR en cámara lenta.">
+  <meta name="theme-color" content="#06111c">
+  <link rel="canonical" href="https://diegokelya.github.io/playback-futbol/">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/logo-128.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PlayBack Fútbol">
+  <meta property="og:title" content="PlayBack Fútbol — Tu mejor jugada, siempre lista">
+  <meta property="og:description" content="Repeticiones automáticas y VAR en cámara lenta para tu partido de fútbol. Todo en tu iPhone.">
+  <meta property="og:url" content="https://diegokelya.github.io/playback-futbol/">
+  <meta property="og:image" content="https://diegokelya.github.io/playback-futbol/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+  <header class="nav">
+    <a class="brand" href="#inicio">
+      <picture><source srcset="assets/logo-128.webp" type="image/webp"><img src="assets/logo-128.png" alt="" width="34" height="34"></picture>
+      <span>PLAYBACK<br>FÚTBOL</span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#guardar" data-i18n="navSave">Cómo se guarda</a>
+      <a href="#funciones" data-i18n="navFeatures">Funciones</a>
+      <a href="#proximamente" data-i18n="navDownload">Descarga</a>
+      <button id="language" type="button" aria-label="Read in English" lang="en">EN</button>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">REPETICIONES AUTOMÁTICAS</p>
+        <h1 data-i18n="heroTitle">Tu mejor jugada.<br><em>Se guarda sola.</em></h1>
+        <p class="lede" data-i18n="heroText">PlayBack Fútbol transforma un iPhone en una cámara que graba en bucle y guarda la jugada cuando alguien grita «gol».</p>
+        <a class="primary" href="#guardar" data-i18n="heroCta">Ver cómo funciona</a>
+      </div>
+      <div class="court-card" role="img" aria-label="Ejemplo: se escucha «gol» y la jugada se guarda" data-i18n-aria="cardAria">
+        <div class="broadcast" aria-hidden="true"><span data-i18n="listening">● ESCUCHANDO</span><span>PLAYBACK FÚTBOL</span></div>
+        <div class="goal-call" aria-hidden="true"><small data-i18n="heard">SE ESCUCHA</small><strong>¡GOOOL!</strong></div>
+        <div class="gesture-chip" aria-hidden="true">💾 <span data-i18n="saved">JUGADA GUARDADA</span></div>
+      </div>
+    </section>
+
+    <section class="intro"><p data-i18n="intro">Sin reloj, accesorios ni suscripciones. Dejá el iPhone mirando la cancha y no te pierdas ningún gol.</p></section>
+
+    <section id="guardar" class="section">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="saveEyebrow">CÓMO SE GUARDA UNA JUGADA</p>
+        <h2 data-i18n="saveTitle">Cinco formas,<br>ninguna complicada.</h2>
+      </div>
+      <div class="gesture-grid">
+        <article class="gesture a"><span aria-hidden="true">📣</span><h3 data-i18n="sGoal">Gritá «gol»</h3><p data-i18n="sGoalText">Escucha el audio del partido: «gol», «gooool» o «golazo» guardan los últimos segundos.</p></article>
+        <article class="gesture b"><span aria-hidden="true">🎉</span><h3 data-i18n="sCheer">Festejo</h3><p data-i18n="sCheerText">Si la gente festeja o grita con fuerza, también guarda la jugada.</p></article>
+        <article class="gesture undo"><span aria-hidden="true">👆</span><h3 data-i18n="sButton">Un toque</h3><p data-i18n="sButtonText">El botón Guardar jugada, siempre a mano.</p></article>
+        <article class="gesture save"><span aria-hidden="true">🖐</span><h3 data-i18n="sPalm">Palma abierta</h3><p data-i18n="sPalmText">Mostrá la mano abierta durante un segundo.</p></article>
+        <article class="gesture var"><span aria-hidden="true">🖐 🖐</span><h3 data-i18n="sVar">Activar VAR</h3><p data-i18n="sVarText">Dos palmas separadas abren la repetición en cámara lenta.</p></article>
+      </div>
+    </section>
+
+    <section id="funciones" class="features">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="featureEyebrow">HECHO PARA LA CANCHA</p>
+        <h2 data-i18n="featureTitle">Todo lo que necesitás<br>para no perder la jugada.</h2>
+      </div>
+      <div class="feature-list">
+        <article><b>01</b><div><h3 data-i18n="f1">Repetición instantánea</h3><p data-i18n="f1t">Graba en bucle y guarda los últimos 15, 30 o 60 segundos sin detener la cámara.</p></div></article>
+        <article><b>02</b><div><h3 data-i18n="f2">Se guarda solo</h3><p data-i18n="f2t">Detecta «gol» y festejos con el audio del partido. Todo el análisis se hace en el iPhone, sin internet.</p></div></article>
+        <article><b>03</b><div><h3 data-i18n="f3">VAR en cámara lenta</h3><p data-i18n="f3t">Revisá la jugada a ½× o cuadro por cuadro, con doble toque para ampliar justo donde está la pelota.</p></div></article>
+        <article><b>04</b><div><h3 data-i18n="f4">Tus jugadas, en tu iPhone</h3><p data-i18n="f4t">Miniaturas, reproducción y copia a Fotos cuando vos quieras. Sin cuentas, servidores ni publicidad.</p></div></article>
+      </div>
+    </section>
+
+    <section id="proximamente" class="waitlist">
+      <p class="eyebrow" data-i18n="waitEyebrow">PRÓXIMAMENTE</p>
+      <h2 data-i18n="waitTitle">PlayBack Fútbol<br>está entrando a la cancha.</h2>
+      <p data-i18n="waitText">Estamos probando la app en partidos reales. Todavía no está disponible para descargar.</p>
+      <p class="badge" data-i18n="waitBadge">En desarrollo para iPhone</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 PlayBack Fútbol</span>
+    <nav aria-label="Legal">
+      <a href="support.html" data-i18n="support">Soporte</a>
+      <a href="privacy.html" data-i18n="privacy">Privacidad</a>
+      <a href="https://github.com/diegokelya/playback-futbol">GitHub</a>
+    </nav>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

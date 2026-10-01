@@ -1,0 +1,42 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      # Publish only the public site, never README or workflow files.
+      - name: Build _site
+        run: |
+          mkdir -p _site/assets
+          cp index.html support.html privacy.html 404.html app.js styles.css sitemap.xml _site/
+          cp assets/logo-128.png assets/logo-128.webp assets/apple-touch-icon.png assets/og-image.png _site/assets/
+          # Fail if a page references a local file that was not published.
+          for page in index support privacy; do
+            for ref in $(grep -ohE '(src|href|srcset)="(assets/[^"]+|[a-z0-9-]+\.(css|js|html|xml))"' "_site/$page.html" | cut -d'"' -f2); do
+              test -f "_site/$ref" || { echo "::error::Missing $ref in $page.html"; exit 1; }
+            done
+          done
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
